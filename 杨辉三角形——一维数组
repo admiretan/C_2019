@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+	int Old[10]={0};
+	int New[10]={0};
+	int i,j,k,l;
+	Old[0]=1;
+	for(i=0;i<10;i++)
+		if(Old[i]>0)
+			printf("%d\t",Old[i]);
+	printf("\n");
+	for(i=1;i<10;i++)
+	{
+		New[0]=1;
+		for(j=1;j<(i+1);j++)
+		{New[j]=Old[j]+Old[j-1];	}
+		for(l=0;l<10;l++)
+			if(New[l]>0)
+				printf("%d\t",New[l]);
+		printf("\n");
+		for(k=0;k<10;k++)
+			Old[k]=New[k];		
+	}
+
+	return 0;
+}
