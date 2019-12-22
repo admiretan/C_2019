@@ -45,12 +45,12 @@ int DealDiviso(int max,int min)
 int DealMultiple(int max,int min)
 {
 	int i;
-	for(i=max;i<(max*min+1);i++)
+	for(i=max;i<(max*min+1);i++)		//从两个数中的大数开始寻找最小公倍数，直到大数与小数之积为止
 	{
-		if((i%max==0)&&(i%min==0))
+		if((i%max==0)&&(i%min==0))		//若当前数能同时被大数和小数整除
 		{
-			printf("最小公倍数为：%d",i);
-			break;
+			printf("最小公倍数为：%d",i);	//	
+			break;	//找到最小公倍数就结束循环
 		}
 	}
 	return 0;
